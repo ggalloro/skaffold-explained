@@ -16,7 +16,7 @@ apiVersion: skaffold/v4beta3
 kind: Config
 build:
   artifacts:
-    - image: scdongcp-app
+    - image: skaffold-expl-app
       docker:
         dockerfile: Dockerfile
 manifests:

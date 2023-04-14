@@ -15,37 +15,37 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: scdongcp-app
+  name: skaffold-expl-app
   labels:
-    app: scdongcp-app
+    app: skaffold-expl-app
 spec:
   ports:
   - name: http
     port: 80
     targetPort: 8081
   selector:
-    app: scdongcp-app
+    app: skaffold-expl-app
   type: LoadBalancer
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: scdongcp-app
+  name: skaffold-expl-app
   labels:
-    app: scdongcp-app
+    app: skaffold-expl-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: scdongcp-app
+      app: skaffold-expl-app
   template:
     metadata:
       labels:
-        app: scdongcp-app
+        app: skaffold-expl-app
     spec:
       containers:
-      - name: scdongcp-app
-        image: scdongcp-app
+      - name: skaffold-expl-app
+        image: skaffold-expl-app
         ports:
         - containerPort: 8081
           name: http

@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: java-scdongcp
+  name: java-skaffold-expl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: java-scdongcp
+      app: java-skaffold-expl
   template:
     metadata:
       labels:
-        app: java-scdongcp
+        app: java-skaffold-expl
     spec:
       containers:
       - name: server
-        image: java-scdongcp
+        image: java-skaffold-expl
         ports:
         - containerPort: 8080
         env:
@@ -34,11 +34,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: java-scdongcp-external
+  name: java-skaffold-expl-external
 spec:
   type: LoadBalancer
   selector:
-    app: java-scdongcp
+    app: java-skaffold-expl
   ports:
   - name: http
     port: 80

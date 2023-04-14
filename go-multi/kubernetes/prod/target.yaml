@@ -15,13 +15,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: scdongcp-app
+  name: skaffold-expl-app
 spec:
   replicas: 3
   template:
     spec:
       containers:
-        - name: scdongcp-app
+        - name: skaffold-expl-app
           env:
             - name: TARGET
               value: prod
