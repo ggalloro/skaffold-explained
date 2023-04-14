@@ -1,3 +1,3 @@
-module scd-ongcp
+module skaffold-explained
 
 go 1.19

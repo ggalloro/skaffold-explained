@@ -3,7 +3,7 @@
 # Use base golang image from Docker Hub
 FROM golang:1.19 as build
 
-WORKDIR /scd-ongcp
+WORKDIR /skaffold-explained
 
 # Install dependencies in go.mod and go.sum
 COPY go.mod go.sum ./
@@ -26,6 +26,6 @@ FROM gcr.io/distroless/base
 # See https://golang.org/pkg/runtime/
 ENV GOTRACEBACK=single
 
-WORKDIR /scd-ongcp
+WORKDIR /skaffold-explained
 COPY --from=build /app .
 ENTRYPOINT ["./app"]

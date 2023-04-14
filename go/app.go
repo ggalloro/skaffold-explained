@@ -22,11 +22,11 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "scd-on-gcp app running in target: %s!!\n", os.Getenv("TARGET"))
+	fmt.Fprintf(w, "skaffold-explained app running in target: %s!!\n", os.Getenv("TARGET"))
 }
 
 func main() {
-	log.Printf("scd-on-gcp app server ready, running in target: %s", os.Getenv("TARGET"))
+	log.Printf("skaffold-explained app server ready, running in target: %s", os.Getenv("TARGET"))
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(":8081", nil)
 }

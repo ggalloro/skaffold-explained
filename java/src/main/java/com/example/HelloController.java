@@ -13,6 +13,6 @@ public class HelloController {
     @GetMapping("/") 
     public String hello()
     {
-        return String.format("scd-on-gcp app running in target: %s !!", target);
+        return String.format("skaffold-explained app running in target: %s !!", target);
     }
 }
