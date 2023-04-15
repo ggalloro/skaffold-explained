@@ -5,8 +5,8 @@
 
   <artifactId>java-skaffold-expl</artifactId>
   <packaging>jar</packaging>
-  <name>Secure CD on GCP</name>
-  <description>Secure Continuous Delivery on GCP</description>
+  <name>Skaffold Explained</name>
+  <description>Java Skaffold Explained App</description>
   <version>1.0.0</version>
 
   <parent>
