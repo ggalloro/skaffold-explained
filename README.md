@@ -109,6 +109,10 @@ skaffold run --tail
 ```
 cd ../go-multi
 ```
+```
+minikube stop
+eval $(minikube -p minikube docker-env -u)
+```
 
 ```
 skaffold build --file-output artifacts.json --default-repo europe-docker.pkg.dev/galloro-host/demos
