@@ -35,7 +35,7 @@ skaffold dev --port-forward
 ```
 portForward:
   - resourceType: deployment
-    resourceName: scdongcp-app
+    resourceName: skaffold-expl-app
     port: http
     localPort: 4503
 ```
@@ -54,7 +54,7 @@ docker images
 
 ```
 test:
-- image: scdongcp-app
+- image: skaffold-expl-app
   custom:
     - command: echo This is a custom test command
 ```
