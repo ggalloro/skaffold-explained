@@ -1,6 +1,6 @@
 # Skaffold Explained
 
-. 
+## Code, assets and command used in the ["Skaffold Explained" talk](https://www.youtube.com/live/X8rkZ6mjP7I?feature=share&t=21076) at Cloud Native Rejekts EU 2023. 
 
 
 ```
