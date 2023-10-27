@@ -24,20 +24,22 @@ eval $(minikube -p minikube docker-env)
 skaffold config set --kube-context minikube local-cluster true
 ```
 
-
-
-```
-skaffold dev --port-forward
-```
-
-
-
 ```
 portForward:
   - resourceType: deployment
     resourceName: skaffold-expl-app
     port: http
     localPort: 4503
+```
+```
+test:
+- image: skaffold-expl-app
+  custom:
+    - command: echo This is a custom test command
+```
+
+```
+skaffold dev
 ```
 
 
@@ -52,12 +54,7 @@ skaffold build --file-output artifacts.json
 docker images
 ```
 
-```
-test:
-- image: skaffold-expl-app
-  custom:
-    - command: echo This is a custom test command
-```
+
 
 
 ```
